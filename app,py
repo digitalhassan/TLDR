@@ -3,6 +3,8 @@ from flask import Flask, request
 from telegram import Bot, Update
 from telegram.ext import CommandHandler, MessageHandler, Filters, Dispatcher
 
+# This is a Telegram Bot Test
+
 TOKEN = os.getenv('TELEGRAM_TOKEN')
 APP_URL = os.getenv('APP_URL')
 
