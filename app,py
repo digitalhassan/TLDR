@@ -8,6 +8,7 @@ APP_URL = os.getenv('APP_URL')
 
 app = Flask(__name__)
 bot = Bot(TOKEN)
+dp = Dispatcher(bot, None)
 
 def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Hello this is the first bot Hassan has made!")
@@ -26,7 +27,6 @@ def webhook_handler():
     return "ok"
 
 def main():
-    dp = Dispatcher(bot, None)
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, echo))
     dp.add_error_handler(error)
