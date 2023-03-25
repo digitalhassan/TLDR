@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request
 from telegram import Bot, Update
-from telegram.ext import CommandHandler, MessageHandler, filters, Dispatcher
+from telegram.ext import CommandHandler, MessageHandler, filters, dispatcher
 
 # This is a Telegram Bot Test
 
